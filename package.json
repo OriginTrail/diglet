@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "@deadcanaries/diglet@2.0.6",
+      "/Users/miloskotlar/ot-node"
+    ]
+  ],
+  "_from": "@deadcanaries/diglet@2.0.6",
+  "_id": "@deadcanaries/diglet@2.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-mgAy+Go8xVi1c+6bhZiYqCNbzjM5kBVT7alJwcKlltWR1nWuZVNGZmbU/7+M+h+zpjHrh6CkMwDpK2GbEa7EoA==",
+  "_location": "/@deadcanaries/diglet",
+  "_phantomChildren": {
+    "bindings": "1.3.0",
+    "bip66": "1.1.5",
+    "bn.js": "4.11.8",
+    "create-hash": "1.2.0",
+    "drbg.js": "1.0.1",
+    "elliptic": "6.5.4",
+    "nan": "2.10.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@deadcanaries/diglet@2.0.6",
+    "name": "@deadcanaries/diglet",
+    "escapedName": "@deadcanaries%2fdiglet",
+    "scope": "@deadcanaries",
+    "rawSpec": "2.0.6",
+    "saveSpec": null,
+    "fetchSpec": "2.0.6"
+  },
+  "_requiredBy": [
+    "/@deadcanaries/kadence"
+  ],
+  "_resolved": "https://registry.npmjs.org/@deadcanaries/diglet/-/diglet-2.0.6.tgz",
+  "_spec": "2.0.6",
+  "_where": "/Users/miloskotlar/ot-node",
+  "author": {
+    "name": "Emery Rose Hall",
+    "email": "emery@deadcanaries.org"
+  },
+  "bin": {
+    "diglet": "bin/diglet.js",
+    "diglet-server": "bin/diglet-server.js",
+    "diglet-tunnel": "bin/diglet-tunnel.js"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/deadcanaries/diglet/issues"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "bunyan": "^1.8.5",
+    "commander": "^2.9.0",
+    "merge": "^1.2.1",
+    "rc": "^1.1.6",
+    "secp256k1": "=3.2.2",
+    "tldjs": "^1.7.0"
+  },
+  "description": "fully encrypted reverse https tunnel",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.16.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "pem": "^1.14.2",
+    "pkg": "^4.3.3",
+    "ws": "^5.2.2"
+  },
+  "homepage": "https://gitlab.com/deadcanaries/diglet#readme",
+  "keywords": [
+    "tunnel",
+    "https"
+  ],
+  "license": "AGPL-3.0",
+  "main": "index.js",
+  "name": "@deadcanaries/diglet",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/deadcanaries/diglet.git"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha -- --exit",
+    "linter": "eslint index.js lib test",
+    "release": "npm run release-tunnel && npm run release-server",
+    "release-server": "pkg ./bin/diglet-server.js --out-path dist",
+    "release-tunnel": "pkg ./bin/diglet-tunnel.js --out-path dist",
+    "test": "mocha --exit"
+  },
+  "version": "2.0.6"
+}
